@@ -1,0 +1,62 @@
+.homepage {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    height: 100vh;
+}
+
+header {
+    background-color: #E74C32;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 40px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    border: none;
+    width: 300px;
+    padding: 10px; /* Add padding to make the input visible */
+    border-radius: 120px; /* Set your desired border radius */
+    transition: box-shadow 0.3s ease; /* Add transition for a smooth effect */
+  }
+
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: inherit;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+button:hover{
+    color: blue;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}

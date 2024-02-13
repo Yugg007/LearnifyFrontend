@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react'
+import Homepage from './components/Homepage'
+import AuthPage from './components/AuthPage'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    const [userDetail, setUserDetail] = useState();
+    console.log("userDetail - ", userDetail);
+    useEffect(() => {
+        const handleCallback = async () => {
+          try {
+            const response = await fetch('http://localhost:8000/handleAuth', {method : 'GET', credentials: 'include'});
+            const userData = await response.json();
+            if (!response.ok) {
+              throw new Error('Authentication check failed');
+            }
+            console.log("userdetail - " ,userData);
+            if(userData.authenticated){
+                setUserDetail(userData);
+            }
+          } catch (error) {
+            console.error('Error checking authentication:', error.message);
+          }
+        };
+
+        console.log("call start from use effect")
+    
+        handleCallback();
+    },[]);
+    return (
+        <>
+            {userDetail?.authenticated ? <Homepage userDetail={userDetail?.user}/> : <AuthPage setUserDetail={setUserDetail}/>}
+        </>
+    )
 }
 
-export default App;
+export default App

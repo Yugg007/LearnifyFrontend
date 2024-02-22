@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/LearnifyFrontendV1/static/css/main.11d73463.css",
+    "main.js": "/LearnifyFrontendV1/static/js/main.92e67371.js",
+    "static/media/Learnify-Logo.png": "/LearnifyFrontendV1/static/media/Learnify-Logo.a87d680d07794e8f5aad.png",
+    "index.html": "/LearnifyFrontendV1/index.html",
+    "main.11d73463.css.map": "/LearnifyFrontendV1/static/css/main.11d73463.css.map",
+    "main.92e67371.js.map": "/LearnifyFrontendV1/static/js/main.92e67371.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.11d73463.css",
+    "static/js/main.92e67371.js"
+  ]
+}

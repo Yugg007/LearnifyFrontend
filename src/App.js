@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import Homepage from './components/Homepage'
 import AuthPage from './components/AuthPage'
+import Router from './components/Router';
 
 const App = () => {
     const [userDetail, setUserDetail] = useState();
@@ -28,7 +28,7 @@ const App = () => {
     },[]);
     return (
         <>
-            {userDetail?.authenticated ? <Homepage userDetail={userDetail?.user}/> : <AuthPage setUserDetail={setUserDetail}/>}
+            {userDetail?.authenticated ? <Router userDetail={userDetail?.user}/> : <AuthPage setUserDetail={setUserDetail}/>}
         </>
     )
 }

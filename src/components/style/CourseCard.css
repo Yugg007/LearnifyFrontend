@@ -1,0 +1,51 @@
+/* Course card container */
+.course-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  padding: 30px;
+}
+
+/* Individual course card styles */
+.course-card {
+  width: 30%;
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+
+  .course-details {
+    display: flex;
+    justify-content: space-between;
+
+    .rating,
+    .comments {
+      font-size: 0.8rem;
+      color: #777;
+    }
+  }
+}
